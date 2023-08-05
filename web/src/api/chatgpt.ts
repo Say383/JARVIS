@@ -5,7 +5,7 @@ import { CHAT_GPT_URL, CHAT_GPT_LLM } from "@/config";
 axios.defaults.headers.post["Content-Type"] = "application/json";
 
 export async function chatgpt(messageList: CleanChatMessage[], apiKey: string) {
-  var endpoint = `${CHAT_GPT_URL}/v1/chat/completions`
+  const endpoint = `${CHAT_GPT_URL}/v1/chat/completions`
 
   try {
     const completion = await axios({
